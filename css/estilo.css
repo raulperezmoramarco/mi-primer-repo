@@ -1,0 +1,293 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+    --verde: #006600;
+
+} /* para almacenar valores o paleta de colores que se van a usar en la web, se declaran con :root {} y se invoca como color: var(--nombre del color o valor)*/
+
+/* Globales */
+html { /*SELECTORES*/
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para Box Model */
+    scroll-snap-type: y mandatory; /*La(Y)= Va hacer scroll de arriba hacia abajo. La (X)= scroll de derecha a izquierda.*//*Después hay que ponerlo en cada sección que queremos el scroll*/
+}
+/*SCROLL snap*/
+
+.servicios,
+.navegacion-principal,
+.formulario,
+footer {
+    scroll-snap-align:center;
+    scroll-snap-stop:always; /*Para que pare en la zona elegida*/
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  } /* aca el asterisco y luego las llaves, significa que seleccione todo, o sea ese border box se le aplica a todos los elementos por las dudas si lo llegan a necesitar.*/
+    /* ahora la coma es para cuando dos clases tiene el mismo codigo se puede hacer: clase, clase */
+
+body {
+    font-size: 16px; /* 1 rem = 10px */
+    font-family: "Krub", sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );
+} /* Estos numeros utilizar siempre, ya que hace que la pagina sea mas responsiva y se adapte a las distintas pantallas, pudiendo utilizar la medida REM en lugar de px */
+
+
+.imagen-fondo {
+    background-image: url(../img/hero.jpg); /* para agregar imagen*/
+    background-repeat: no-repeat; /* por default la imagen se repite, este comando es para que no se repita*/
+    /*background-attachment: fixed; /* es para que la imagen mantenga las propociones originales y no se deforme*/
+    /*background-size: cover; /* es porque a veces la imagen no cubre todo el ancho, entonces con esto si lo hace*/
+    height:auto; 
+    opacity: 0.95;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Tipografía */
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1,h2,h3 {
+    text-align: center;
+}
+
+/* Navegación Principal */
+.nav-background { /* fondo de la barra de navegacion*/
+    background-color: var(--secundario);
+}
+.nav-background-paginas {
+    background-color: var(--secundario);
+    margin-bottom: 2rem;
+}
+
+.navegacion-principal {
+    display: flex; /* se ve de izquierda a derecha*/
+    flex-direction: column;
+    align-items: center; /* para alinear, vinculado al flex-direction*/
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row; /* en media queria se hereda lo que incluye en este caso navegacion-principal y el flex direction es row reemplazando al column, que sería su default*/ 
+        justify-content: space-evenly; /*separacion entre enlaces*/
+    }
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem; /*grueso de la barra de navegacion*/
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+/* Hero */
+.hero {
+    background-image: url(../img/hero.jpg); /* para agregar imagen*/
+    background-repeat: no-repeat; /* por default la imagen se repite, este comando es para que no se repita*/
+    /*background-attachment: fixed; /* es para que la imagen mantenga las propociones originales y no se deforme*/
+    background-size: cover; /* es porque a veces la imagen no cubre todo el ancho, entonces con esto si lo hace*/
+    height: 400px;
+    position: relative; /* SIEMPRE en la clase padre va "position relative"*/
+    margin-bottom: 2rem;
+}
+
+.contenido-hero {
+    position: absolute; /* como en la clase padre ya se definió el relativa, acá se puede poner el absolute*/
+    background-color: rgb(0 0 0 / 70%); /* para transparencia*/
+    width: 100%;
+    height: 100%;
+    
+    /*Para alinear verticalmente u horizontalmente, es el siguiente código:*/
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* hasta acá alinea horizontalmente*/
+    justify-content: center; /* con este lo hace tambien verticalmente*/
+}
+.contenido-hero {
+    color: var(--blanco);
+}
+
+/**.Servicios**/
+@media (min-width: 768px) {
+    .servicios {
+        display: grid; /*a diferencia de flex (de izquierda a derecha o de abajo hacia arriba)
+        grid-template-columns: 300px 300px; define columna en 4 bloques
+        grid-template-rows: 200px 800px; las filas
+        grid: 200px 200px / 300px 300px; /*De esta forma abreviada queda igual, primero va lo de ROWS y luego / para poner lo de COLUMNS.
+            
+        O la otra manera*/
+        grid-template-columns: repeat(2, 1fr);/*dice de forma abreviada que repita 4 veces 1 fraccion
+        grid-template-columns: 25% 25% 25% 25%; aca que divida al ancho de 100% en 4 partes iguales, o sea 25% para cada servicio.
+        grid-template-columns: 1fr 1fr; acá en vez de % la divide en fracciones, el 100 en cuatro fracciones.*/
+        text-align: center;
+    }
+}
+
+@media (min-width: 350px) {
+    .contenedor {
+        max-width: 120rem; /* toma el max de la pantalla y evita ese scroll desfazado */
+        margin: 0 auto 0 auto;
+    }
+    /* Para cuadro de servicios o contacto */
+    .sombra {
+        -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+        -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+        box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+        background-color: var(--blanco);
+        padding: 2rem;
+        border-radius: 1rem; /* bordes redondeados */
+    }
+    .presentacion {
+        text-align: justify;
+    }
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        max-width: 120rem; /* toma el max de la pantalla y evita ese scroll desfazado */
+        margin: 0 auto 0 auto;
+    }
+    /* Para cuadro de servicios o contacto */
+    .sombra {
+        -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+        -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+        box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+        background-color: var(--blanco);
+        padding: 2rem;
+        border-radius: 1rem; /* bordes redondeados */
+    }
+    .presentacion {
+        text-align: justify;
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* para alinear los iconos al centro*/
+}
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+}
+.servicio p {
+    display: list-item;
+    line-height: 2; /* interlineado */
+    text-align:left;
+    text-decoration-style:dotted;
+}
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%; /* para hacerlo circular*/
+    display: flex; /* lo coloca uno frente al otro*/
+    justify-content: space-evenly; /* alinea horizontalmente*/
+    align-items: center; /* alinea verticalmente*/
+
+}
+
+/*Contacto*/
+.formulario {
+    background-color: var(--gris); /*color de fondo del formulario*/
+    width: min(60rem, 100%); /*Utiliza el mínimo de los valores que se ponen*/
+    margin: 0 auto; /*Se puede utilizar acá, cuando cuyo padre no sea una display: flex;*/
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border:none; /*borra el borde del formulario*/
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase; /*Para que esté en mayúsculas*/
+    font-weight: 700; /*Negrita*/
+    margin-bottom: 2rem; /*Para en este caso separar legend de los datos*/
+    color: var(--primario);
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr); /*aca la divide en 2 columnas, como si pusiese 1fr, 1fr*/
+        grid-template-rows: auto, auto, 20rem;
+        column-gap: 1rem; /*separación de columnas*/
+    }    
+    .campo:nth-child(3),/*seudo selector para cuando hay varias clases que se llaman igual, se puede poner 1 va a seleccionar el primero y así, como si fuese un arreglo pero acá se inicia en 1*/
+    .campo:nth-child(4) { /*con la coma se puede agregar otra clase*/   
+        grid-column: 1 / 3; /*esos número salen de ver en la web, inspección y apretar en firefox (firefox developer prediction) a la derecha se puede ver un cuadro y seleccionar MOSTRAR NÚMERO DE LÍNEAS*/
+    }
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    margin-bottom: .5rem;
+    display: block; /*Acomoda todo de arriba hacia abajo*/
+}
+
+/*.campo input[type="text"] { /SELECTORES CON ATRIBUTO para especificar en donde aplicar/
+    
+}*/
+.campo input {
+    width: 100%; /*usa el ancho, en este caso el 100%*/
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+/*Para casillero mensaje*/
+.completar ::placeholder{ /*en esta clase especifiqué que quería la modificación en el placeholder del "Mensaje"*/
+    padding: 1rem;
+    font-family: "Krub", sans-serif;
+}
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    margin-top: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    width:none;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    border: none;
+}
+
+.boton:hover { /*hover, es para cuando te posas sobre un elemento*/
+    cursor: pointer;
+}
+
+.campo textarea {
+    height: 20rem;
+    width: 100%;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylsheet" href="css/normalize.css"> <!--se encarga de normalizar la pagina y siempre debe estar primero-->
+    <link rel="preload" href="css/estilo.css" as="style"> <!--Esto hace que la pagina cargue más rápido--> 
+    <link href="css/estilo.css" rel="stylesheet"> <!--Es lo que vincula con la hoja de estilo (href define ruta de vinculacion y rel justamente relaciona con la hoja de estilo)-->
+    <style type="text/css"> /*Esto es para que el usuario no pueda ampliar o achicar de más el casillero de mensaje, le doy estructura para limitarlo*/
+        textarea {
+            resize: none;
+        }
+    </style>
+    <title>Contacto</title>
+</head>
+<div class="flex-container">
+    <div class="primero">
+        
+    </div>
+</div>
+<body class="imagen-fondo">
+    <header>
+        <div class="nav-background-paginas contacto-enlaces">
+            <nav class="navegacion-principal contenedor">
+                <a href="index.html">Inicio</a>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <main class="contenedor sombra">
+            <h2>Contacto</h2>
+            <div>
+                <section>
+                    <form class="formulario">
+                        <fieldset>
+                            <legend>Formulario para que me puedas contactar dejando tus datos y mensaje:</legend>
+                            
+                            <div class="contenedor-campos"> <!--Se define este div para dar una clase y darle estilo a los campos-->
+                                <div class="campo">
+                                    <input type="text" placeholder="Nombre y Apellido">
+                                </div>
+                                
+                                <div class="campo">
+                                    <input type="email" placeholder="Correo electrónico">
+                                </div>
+                                
+                                <div class="campo">
+                                    <input type="text" placeholder="Asunto">
+                                </div>
+                                
+                                <div class="campo completar"> 
+                                    <textarea placeholder="Mensaje"></textarea>
+
+                                </div>
+                            </div>
+                            <div>
+                                <input class="boton" type="submit" value="Enviar">
+                            </div>
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
+        </main> 
+    </section>
+            </div>
+        </main>     
+    </section>
+    <footer>
+        <p>Todos los derechos reservados. Raúl Pérez Moramarco</p>
+    </footer>
+</body>
+</html>
