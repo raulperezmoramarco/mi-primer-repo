@@ -81,7 +81,7 @@ h1,h2,h3 {
 @media (min-width: 768px) {
     .navegacion-principal {
         flex-direction: row; 
-        justify-content: space-evenly; 
+        justify-content:center; 
     }
 }
 
@@ -273,4 +273,10 @@ h1,h2,h3 {
 .campo textarea {
     height: 20rem;
     width: 100%;
+}
+
+/* Mi historia */
+
+.linea-separador {
+    border-bottom: 1px solid var(--oscuro);
 }
