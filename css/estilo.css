@@ -6,6 +6,7 @@
     --gris: #757575;
     --grisClaro: #DFE9F3;
     --verde: #006600;
+    --verdeClaro: #25D366; 
 
 } 
 
@@ -17,13 +18,13 @@ html {
 }
 /*SCROLL snap*/
 
-.servicios,
+/*.servicios,
 .navegacion-principal,
 .formulario,
 footer {
     scroll-snap-align:center;
     scroll-snap-stop:always; 
-}
+}*/
 
 
 *, *:before, *:after {
@@ -249,11 +250,11 @@ h1,h2,h3 {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: var(--verde);
+    background: var(--verdeClaro);
     border-radius: 50px;
     text-align:center;
     font-size: 0.5px;
-    box-shadow: 0px 1px 10px var(--oscuro);
+    box-shadow: 0px 1px 15px var(--oscuro);
     z-index: 100;
 }
 .btn-wsp:hover {
