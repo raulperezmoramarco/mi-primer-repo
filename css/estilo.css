@@ -297,3 +297,32 @@ h1,h2,h3 {
 .linea-separador {
     border-bottom: 1px solid var(--oscuro);
 }
+
+/* Mi Historia */
+
+.linea-separador {
+    border-bottom: 1px solid var(--oscuro);
+}
+
+.miHistoria {
+    display: grid;
+    grid-template-rows: repeat(2, auto); /* Hace 3 columnas, 2fr o auto: tamaño de imagen*/
+    /*column-gap: 10rem; le da una separación al texto de la imagen*/
+}
+
+@media (min-width: 768px) {
+    .miHistoria {
+        grid-template-columns: repeat(2, auto);
+        column-gap: 2rem;
+    }
+}
+.miHistoria_imagen {
+    grid-row: 1 / 2;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .miHistoria_imagen {
+        grid-column: 2 / 3;
+    }
+}
