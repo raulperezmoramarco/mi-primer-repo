@@ -6,7 +6,12 @@
     --gris: #757575;
     --grisClaro: #DFE9F3;
     --verde: #006600;
-    --verdeClaro: #25D366; 
+    --verdeClaro: #25D366;
+    --grisOscuro: #4B4B4B;
+    --verdeAna: #005346;
+    --verdeAnaclaro: #008489;
+
+
 
 } 
 
@@ -34,7 +39,7 @@ footer {
 body {
     font-size: 16px;
     font-family: "Krub", sans-serif;
-    background-image: linear-gradient(to top, var(--secundario) 0%, var(--blanco) 100% );
+    background-image: linear-gradient(to top, var(--grisOscuro) 0%, var(--grisClaro) 100% );
 } 
 
 
@@ -66,10 +71,10 @@ h1,h2,h3 {
 
 /* Navegación Principal */
 .nav-background {
-    background-color: var(--secundario);
+    background-color: var(--verdeAna);
 }
 .nav-background-paginas {
-    background-color: var(--secundario);
+    background-color: var(--verdeAna);
     margin-bottom: 2rem;
 }
 
@@ -95,13 +100,13 @@ h1,h2,h3 {
 }
 
 .navegacion-principal a:hover {
-    background-color: var(--primario);
+    background-color: var(--gris);
     color: var(--oscuro);
 }
 
 /* Hero */
 .hero {
-    background-image: url(../img/hero.jpg); 
+    background-image: url(../img_mi_historia/Simple\ Office\ Background\ Banner\ Decoration.jpg); 
     background-repeat: no-repeat;
     background-size: cover; 
     height: 400px;
@@ -121,7 +126,7 @@ h1,h2,h3 {
     justify-content: center; 
 }
 .contenido-hero {
-    color: var(--blanco);
+    color: var(--grisClaro);
 }
 
 /**.Servicios**/
@@ -142,7 +147,7 @@ h1,h2,h3 {
         -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
         -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
         box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
-        background-color: var(--blanco);
+        background-color: var(--grisClaro);
         padding: 2rem;
         border-radius: 1rem; 
     }
@@ -160,7 +165,7 @@ h1,h2,h3 {
         -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
         -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
         box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
-        background-color: var(--blanco);
+        background-color: var(--grisClaro);
         padding: 2rem;
         border-radius: 1rem; 
     }
@@ -175,7 +180,7 @@ h1,h2,h3 {
     align-items: center; 
 }
 .servicio h3 {
-    color: var(--secundario);
+    color: var(--#686868);
     font-weight: normal;
 }
 .servicio p {
@@ -187,7 +192,7 @@ h1,h2,h3 {
 .servicio .iconos {
     height: 15rem;
     width: 15rem;
-    background-color: var(--primario);
+    background-color: #686868;
     border-radius: 50%; 
     display: flex; 
     justify-content: space-evenly; 
@@ -196,6 +201,13 @@ h1,h2,h3 {
 }
 
 /*Contacto*/
+
+.fondo_contacto {
+    background-image: url(../img_mi_historia/Abstract.png); 
+    background-repeat: no-repeat; 
+    height:auto;
+}
+
 .formulario {
     background-color: var(--gris); 
     width: min(60rem, 100%); 
@@ -214,7 +226,7 @@ h1,h2,h3 {
     text-transform: uppercase; 
     font-weight: 700; 
     margin-bottom: 2rem; 
-    color: var(--primario);
+    color: var(--oscuro);
 }
 
 @media (min-width: 768px) {
@@ -267,7 +279,7 @@ h1,h2,h3 {
     font-family: "Krub", sans-serif;
 }
 .boton {
-    background-color: var(--secundario);
+    background-color: var(--verdeAna);
     color: var(--blanco);
     margin-top: 3rem;
     text-transform: uppercase;
