@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="css/normalize.css" as="style">
-    <link rel="stylsheet" href="css/normalize.css"> 
-    <link rel="preload" href="css/estilo.css" as="style">  
+    <link href="css/normalize.css" rel="stylsheet">   
     <link href="css/estilo.css" rel="stylesheet">
     <style type="text/css"> 
         textarea {
@@ -49,20 +47,19 @@
                             
                             <div class="contenedor-campos">
                                 <div class="campo">
-                                    <input type="text" placeholder="Nombre y Apellido">
+                                    <input type="text" placeholder="Nombre y Apellido" id="nombre-apellido">
                                 </div>
                                 
                                 <div class="campo">
-                                    <input type="email" placeholder="Correo electrónico">
+                                    <input type="email" placeholder="Correo electrónico" id="correo">
                                 </div>
                                 
                                 <div class="campo">
-                                    <input type="text" placeholder="Asunto">
+                                    <input type="text" placeholder="Asunto" id="asunto">
                                 </div>
                                 
-                                <div class="campo completar"> 
-                                    <textarea placeholder="Mensaje"></textarea>
-
+                                <div class="campo mensaje"> 
+                                    <input type="text" placeholder="Mensaje" id="mensaje">
                                 </div>
                             </div>
                             <div>
@@ -80,5 +77,6 @@
     <footer>
         <p>Todos los derechos reservados. Raúl Pérez Moramarco</p>
     </footer>
+    <script src="js/scripts.js"></script> 
 </body>
 </html>

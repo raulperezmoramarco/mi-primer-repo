@@ -50,9 +50,12 @@ body {
     opacity: 0.95;
 }
 
+/* Footer */
+
 footer {
     text-align: center;
     font-size: 1.5rem;
+    color:#DFE9F3;
 }
 
 /* Tipografía */
@@ -202,9 +205,26 @@ h1,h2,h3 {
 
 /*Contacto*/
 
+.error {
+    background-color: rgb(185, 0, 0);
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    border-radius: 1rem;
+}
+
+.correcto {
+    background-color: rgba(0, 185, 15, 0.925);
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    border-radius: 1rem;
+}
+
 .fondo_contacto {
-    background-image: url(../img_mi_historia/Abstract.png); 
-    background-repeat: no-repeat; 
+    background-image: url(../img_mi_historia/fondo-contacto.jpg);  
     height:auto;
 }
 
@@ -255,6 +275,13 @@ h1,h2,h3 {
     width: 100%; 
     border: none;
     padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.mensaje input {
+    width: 100%; 
+    border: none;
+    padding: 2rem;
     border-radius: .5rem;
 }
 
