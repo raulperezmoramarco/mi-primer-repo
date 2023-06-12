@@ -83,7 +83,7 @@ formulario.addEventListener("submit", function(evento){
 
         return;// Corta la ejecución de código
     } 
-        // Crear la otra alerta
+        // Crear la alerta de error
         mostrarError("Todos los campos son obligatorios");  
 });
 
